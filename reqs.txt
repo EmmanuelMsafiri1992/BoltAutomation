@@ -1,0 +1,60 @@
+follow the scope of the project.
+
+Automation Platform for Design Engineers
+A web-based platform that turns floor plans into complete fire-safety, electrical and structural projects that comply with technical standards (NBR, DIN, etc.).
+----
+High-Level Flow
+1. Upload floor plan (DWG/DXF or raster image).
+2. Analyse & classify the project type and applicable standards.
+3. AI / rule-based interpretation of the plan to detect rooms, walls, openings and device counts.
+4. AutoCAD automation: insert parametric blocks (luminaires, outlets, emergency signage), draw dimensions, labels and legends.
+5. Export final 2D DWG to Revit → generate detailed 3D models of conduits, wiring and components.
+6. Automatically pull official forms & standards for the project’s municipality / state, fill them out, and package everything for digital signing.
+----
+Main Objectives
+1. Automate AutoCAD: position blocks, trace lines, add dimensions & text according to NBR, DIN, etc.
+2. Interpret floor plans with AI or business rules to identify building typology (residential, commercial), floors and device quantities.
+3. Chain workflow to Revit to create detailed 3D mock-ups from the 2D project.
+4. Generate regulatory documentation (descriptive reports, calculation reports, application forms) based on project location.
+----
+Functionalities & Requirements
+Upload & Plan Preparation
+• Web UI to attach DWG/DXF or raster images.
+• Automatic format conversion via external API.
+Analysis & Classification
+• Plan-interpretation module:
+• Detect environments, walls, openings, geometric features.
+• Query rule base (NBR, DIN) to determine device placement.
+AutoCAD Automation
+• Integration layer: AutoCAD COM API or Autodesk Design Automation API.
+• Create layers & parametric blocks.
+• Auto-insert lighting fixtures, outlets, power points, emergency signage.
+• Draw dimensions & legends to technical standard.
+Export to Revit
+• Export final DWG → Revit triggers:
+• 3D modelling of wiring, conduits, electrical components.
+• Rendering of mock-up with installation details.
+Regulatory Documentation
+• Auto-search official standards & forms by municipality / state.
+• Auto-fill descriptive reports, calculation reports, application forms.
+• Download & compile into a single package for digital signature.
+----
+Technical Architecture
+• Frontend: React or Angular for upload, project-type selection and status tracking.
+• Backend (Python / Node.js):
+• Orchestrates CAD & Revit workflows.
+• Image-processing & plan-interpretation modules.
+• Regulatory rules & form-filling services.
+• CAD services: container or server with AutoCAD installed (or Autodesk cloud APIs).
+• Revit integration: Dynamo / Python scripts or Design Automation for Revit.
+• Database: stores projects, norm configurations and processing logs.
+----
+Workflow Summary
+1. Upload floor plan
+2. Classify project type & norms
+3. Analyse plan (CAD or image)
+4. Generate 2D in AutoCAD
+5. Export & model 3D in Revit
+6. Compile docs for review & digital signature
+
+I need to set up a complete project elaboration process, my idea is our app to view the plan that I will attach (this plan that comes directly from the architecture office) I attach what type of project our app should do (example: Electric) our ia searches in the legislation according to the characteristics of the architecture what our project needs, searches on Google for similar projects, creates a provisional Yaml to make this project, imagines the project and transforms it into autocad language and does the project within the autocad, after the completed project, our app opens the revit and does the BIM standard 3d modeling.
