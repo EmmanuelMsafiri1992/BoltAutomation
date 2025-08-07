@@ -1,0 +1,35 @@
+tga-desktop-automation/
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── CompliancePanel.tsx
+│   │   │   ├── DisciplineSelector.tsx
+│   │   │   ├── FileUpload.tsx
+│   │   │   ├── Header.tsx
+│   │   │   ├── ProcessingPanel.tsx
+│   │   │   ├── ProjectConfig.tsx
+│   │   │   ├── ResultsPanel.tsx
+│   │   │   └── StatusBar.tsx
+│   │   ├── types/
+│   │   │   └── project.ts
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   └── main.tsx
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── vite.config.ts
+│   └── tailwind.config.js
+├── tga_backend/
+│   ├── services/
+│   │   └── processing.py  
+│   ├── standards/
+│   │   └── vdi_scraper.py
+│   ├── main.py
+│   ├── models.py
+│   └── requirements.txt
+├── .gitignore
+└── README.md
