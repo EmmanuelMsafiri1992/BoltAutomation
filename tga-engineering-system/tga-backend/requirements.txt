@@ -1,0 +1,2 @@
+requests==2.28.1
+autodesk-platform-services==0.1.0 # Use this or a similar library for a more robust API wrapper  
